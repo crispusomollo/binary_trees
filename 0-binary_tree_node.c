@@ -2,12 +2,12 @@
 
 /**
  * binary_tree_node - Creates a binary tree node
- * @origin: pointer to the parent of the node created
- * @val: The value to include into the new node
+ * @parent: pointer to the parent of the node created
+ * @value: The value to include into the new node
  *
  * Return: node otherwise NULL if an error exists
  */
-binary_tree_t *binary_tree_node(binary_tree_t *origin, int val)
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
 	binary_tree_t *new;
 
@@ -15,8 +15,8 @@ binary_tree_t *binary_tree_node(binary_tree_t *origin, int val)
 	if (new == NULL)
 		return (NULL);
 
-	new->n = val;
-	new->origin = origin;
+	new->n = value;
+	new->parent = parent;
 	new->left = NULL;
 	new->right = NULL;
 
